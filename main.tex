@@ -1,0 +1,98 @@
+% Template:     Informe/Reporte LaTeX
+% Documento:    Archivo principal
+% Versión:      5.4.7 (25/06/2018)
+% Codificación: UTF-8
+%
+% Autor: Pablo Pizarro R. @ppizarror
+%        Facultad de Ciencias Físicas y Matemáticas
+%        Universidad de Chile
+%        pablo.pizarro@ing.uchile.cl, ppizarror.com
+%
+% Manual template: [http://latex.ppizarror.com/Template-Informe/]
+% Licencia MIT:    [https://opensource.org/licenses/MIT/]
+
+% CREACIÓN DEL DOCUMENTO
+\documentclass[letterpaper,11pt]{article} % Articulo tamaño carta, 11pt
+\usepackage[utf8]{inputenc} % Codificación UTF-8
+\usepackage{subcaption} 
+
+% INFORMACIÓN DEL DOCUMENTO
+\def\titulodelinforme {Control Adaptativo}
+\def\temaatratar {Ejercicio $N^{o}$ 1}
+
+\def\autordeldocumento {Fran Herrera Rojas}
+\def\nombredelcurso {Control Adaptivo de Sistemas}
+\def\codigodelcurso {EL-7017}
+
+\def\nombreuniversidad {Universidad de Chile}
+\def\nombrefacultad {Facultad de Ciencias Físicas y Matemáticas}
+\def\departamentouniversidad {Departamento de la Universidad}
+\def\imagendepartamento {departamentos/fcfm}
+\def\imagendepartamentoescala {0.2}
+\def\localizacionuniversidad {Santiago, Chile}
+
+% INTEGRANTES, PROFESORES Y FECHAS
+\def\tablaintegrantes {
+\begin{tabular}{ll}
+	Alumna:
+	& \begin{tabular}[t]{@{}l@{}}
+		Francisca Herrera Rojas \\
+	\end{tabular} \\
+	Profesor:
+	& \begin{tabular}[t]{@{}l@{}}
+		Manuel Duarte Mermoud
+	\end{tabular} \\
+	Auxiliares:
+	& \begin{tabular}[t]{@{}l@{}}
+		Juan Carlos Travieso \\
+	\end{tabular} \\
+	Ayudantes:
+	& \begin{tabular}[t]{@{}l@{}}
+	Lisbel Bárzaga\\
+	\end{tabular} \\
+	\multicolumn{2}{l}{} \\
+	& \\
+	\multicolumn{2}{l}{Fecha de realización: \today} \\
+	\multicolumn{2}{l}{Fecha de entrega: \today} \\
+	\multicolumn{2}{l}{\localizacionuniversidad}
+\end{tabular}}{
+}
+
+% CONFIGURACIONES
+\input{lib/config}
+
+% IMPORTACIÓN DE LIBRERÍAS
+\input{lib/env/imports}
+
+% IMPORTACIÓN DE FUNCIONES Y ENTORNOS
+\input{lib/cmd/all}
+
+% IMPORTACIÓN DE ESTILOS
+\input{lib/style/all}
+
+% CONFIGURACIÓN INICIAL DEL DOCUMENTO
+\input{lib/cfg/init}
+
+% INICIO DE LAS PÁGINAS
+\begin{document}
+
+% PORTADA
+\input{lib/page/portrait}
+
+% CONFIGURACIÓN DE PÁGINA Y ENCABEZADOS
+\input{lib/cfg/page}
+
+% RESUMEN O ABSTRACT
+
+% TABLA DE CONTENIDOS - ÍNDICE
+\input{lib/page/index} % Índice, se puede borrar
+
+% CONFIGURACIONES FINALES
+\input{lib/cfg/final}
+
+% ======================= INICIO DEL DOCUMENTO =======================
+
+\input{TEXT.tex} % Ejemplo, se puede borrar
+
+% FIN DEL DOCUMENTO
+\end{document}

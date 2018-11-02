@@ -1,0 +1,134 @@
+\section{Problema 1}
+Considerando la planta lineal inestable y desconocida de primer orden:
+\begin{align}
+    \dot{y_{p}}(t)-3y_{p}(t)=2u(t)&&y_{p}(0)=-0.5
+\end{align}
+y el modelo de referencia lineal asintoticamente estable de primer orden:
+\begin{align}
+     \dot{y_{m}}(t)+0.5y_{m}(t)=3r(t)&&y_{m}(0)=1
+\end{align}
+
+El objetivo de esta sección es diseñar diferentes tipos de controladores que permitan que los estados de la planta y modelo, $y_{p}$ e $y_{m}$ respectivamente, converjan a 0 en el denominado error de control $e_{c}(t)$.
+\begin{align}
+    e_{c}(t)=\lim_{t\rightarrow\infty}(y_{p}(t)-y_{m}(t))=0
+\end{align}
+
+Los diferentes tipos de controladores comparten la misma ley de control dada por:
+\begin{align}
+    u(t)=\theta(t)x_{p}(t)+k(t)r(t)
+\end{align}
+Se pueden encontrar 2 enfoques respecto al control adaptativo; en uno los parámetros de la planta son estimados en linea y a partir de estas estimaciones se realizan los ajustes de los parámetros de control, este enfoque se denomina \textbf{indirecto}. Por otro lado, el control directo se caracteriza por 
+
+
+
+
+
+\subsection{Controlador Directo}
+\subsubsection{Leyes de Ajuste }
+
+\subsubsection{Resultados}
+En primera instancia se considera una referencia $r(t)$ escalón de amplitud 1 y ganancias adaptativas $sgn(k_{p})=1$ tanto para $\theta(t)$ y $k(t)$, obteniéndose los siguientes resultados para la evolucionó de los estados y la convergencia del error de control.
+
+ \begin{figure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{error_r1.eps}
+    \caption{Convergencia error de control para r(t)=1 escalón}
+    \label{fig:error_r1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{estados_r1.eps}
+    \caption{Estados para r(t)=1 escalón}
+    \label{fig:est_r1}
+  \end{subfigure}
+\end{figure}
+
+ \begin{figure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{error_sine2.eps}
+    \caption{Convergencia error de control para r(t)=2 sine}
+    \label{fig:error_sine2}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{estados_sine2.eps}
+    \caption{Estados para r(t)=2 sine}
+    \label{fig:est_sine2}
+  \end{subfigure}
+\end{figure}
+
+De acuerdo a las Figuras [\ref{fig:error_r1}][ \ref{fig:error_sine2}] es posible apreciar que al iniciar la simulación se presentan oscilaciones propias del comportamiento inestable de la planta; estas oscilaciones son de mayor duración para $r(t)$ sine de amplitud 2. No obstante, en ambos casos se logra la estabilización de la planta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Controlador Indirecto Algebraico}
+\subsubsection{Leyes de Ajuste }
+
+\subsubsection{Resultados}
+
+
+\subsection{Controlador Indirecto Dinámico}
+\subsubsection{Leyes de Ajuste }
+
+\subsubsection{Resultados}
+
+
+\subsection{Controlador Indirecto Combinado}
+\subsubsection{Leyes de Ajuste }
+
+\subsubsection{Resultados}
+
+
+
+
+\section{Problema 2}
+Considerando el sistema de segundo orden definido por:
+\begin{align}
+    \dot{x}(t)=\begin{bmatrix}
+a_{11} & a_{12}\\ 
+ a_{21}& a_{22}x(t)
+\end{bmatrix}+\begin{bmatrix}
+b_{1}\\ 
+b_{2}
+\end{bmatrix}u(t)&&
+y(t)=\begin{bmatrix}
+c_{1}&c_{2}
+\end{bmatrix}
+\end{align}
+
+
+
+
+
+\subsection{Observador basado en una realización mínima para el sistema.}
+
+\subsection{Observador basado en una realización no mínima para el sistema.}
+
+Ahora utilizando los siguientes valores para los parámetros:
+\begin{align}
+    A=\begin{bmatrix}
+0&1\\ 
+-2&-3
+\end{bmatrix}&&b=\begin{bmatrix}
+1\\ 
+1
+\end{bmatrix}&&c=\begin{bmatrix}
+0\\ 
+1
+\end{bmatrix}
+\end{align}
+\subsection{}
+
+\subsection{}
+
+\subsection{}
+
